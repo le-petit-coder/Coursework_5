@@ -29,7 +29,7 @@ class Weapon:
 
 @dataclass
 class EquipmentData:
-    weapons = List[Weapon]
+    weapons: List[Weapon]
     armors: List[Armor]
 
 

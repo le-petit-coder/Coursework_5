@@ -28,7 +28,7 @@ class BaseUnit(ABC):
 
     @property
     def stamina_points(self) -> float:
-        return round(self.stamina_points, 1)
+        return round(self.stamina, 1)
 
     def equip_weapon(self, weapon: Weapon) -> str:
         self.weapon = weapon
@@ -36,7 +36,7 @@ class BaseUnit(ABC):
 
     def equip_armor(self, armor: Armor) -> str:
         self.armor = armor
-        return f"{self.name} экипирован броней {self.weapon.name}"
+        return f"{self.name} экипирован броней {self.armor.name}"
 
     def _count_damage(self, target: BaseUnit) -> float:
         self.stamina -= self.weapon.stamina_per_hit
